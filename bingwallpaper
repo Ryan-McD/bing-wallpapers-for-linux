@@ -1,5 +1,6 @@
 #!/bin/bash
 # author: Whizzzkid (me@nishantarora.in)
+# Modified by Ryan-McD for use with nitrogen and exclusively with cron
 
 # Base URL.
 bing="http://www.bing.com"
@@ -113,17 +114,21 @@ do
     # Set the view to zoom,
     gsettings set org.gnome.desktop.background picture-options "zoom"
   else
-    echo "$XDG_CURRENT_DESKTOP not supported."
-    break
+    # run nitrogen
+    nitrogen --set-zoom-fill "file://$path$imgName"
+
+#    echo "$XDG_CURRENT_DESKTOP not supported."
+#    break
   fi
 
   echo "New wallpaper set successfully for $XDG_CURRENT_DESKTOP."
   
   # If -1 option was passed just run once
-  if [ $run_once == true ];then
+#  if [ $run_once == true ];then
+####### Always run just once
     break
-  fi
+#  fi
 
   # Re-checks for updates every 3 hours.
-  sleep 10800
+#  sleep 10800
 done
