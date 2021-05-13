@@ -116,13 +116,15 @@ do
   else
     # run nitrogen
     nitrogen --set-zoom-fill "file://$path$imgName"
+    # Copy to daily greeter location
+    cp "file://$path$imgName" /usr/share/pixmaps/todayspic.png
 
 #    echo "$XDG_CURRENT_DESKTOP not supported."
 #    break
   fi
 
   echo "New wallpaper set successfully for $XDG_CURRENT_DESKTOP."
-  
+
   # If -1 option was passed just run once
 #  if [ $run_once == true ];then
 ####### Always run just once
