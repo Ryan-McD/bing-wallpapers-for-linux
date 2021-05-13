@@ -115,9 +115,9 @@ do
     gsettings set org.gnome.desktop.background picture-options "zoom"
   else
     # run nitrogen
-    nitrogen --set-zoom-fill "file://$path$imgName"
+    nitrogen --set-zoom-fill $path$imgName
     # Copy to daily greeter location
-    cp "file://$path$imgName" /usr/share/pixmaps/todayspic.jpg
+    cp $path$imgName /usr/share/pixmaps/todayspic.jpg
 
 #    echo "$XDG_CURRENT_DESKTOP not supported."
 #    break
