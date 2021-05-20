@@ -83,6 +83,7 @@ do
   # Getting Image Name.
   imgName=${reqImgURL##*/}
 
+  imgName=$(echo "$imgName" | sed 's/.jpg.*/.jpg/')
   # Create Path Dir.
   mkdir -p $path
 
