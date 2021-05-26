@@ -24,7 +24,7 @@ const="&n=1"
 extn=".jpg"
 
 # Size.
-size="1920x1200"
+size="1920x1080"
 
 # Collection Path.
 path="$HOME/Pictures/Bing/"
